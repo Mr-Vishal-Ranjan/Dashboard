@@ -11,10 +11,10 @@ const LeftNavigationBar = () => {
 
         <div>
           <Title name="MAIN MENU"/>
-          <Common name2="Dashboard" img="./images/dashboard.png"/>
+          <Common name="Dashboard" img="./images/dashboard.png" color/>
           <Common name="Recruitment" img="./images/g7.png"/>
-          <Common name="Schedule" img="./images/schedule.png"/>
-          <Common name="Employee" img="./images/logo.png"/>
+          <Common name="Schedule" img="./images/schedule.png" />
+          <Common name="Employee" img="./images/employee.png"/>
           <Common name="Department" img="./images/department.png"/>
         </div>
 

@@ -4,7 +4,7 @@ import LeftNavigationBar from './LeftNavigationBar'
 
 const NavigationBar = () => {
   return (
-    <div>
+    <div className='navigationBar'>
         <LeftNavigationBar/>
     </div>
   )

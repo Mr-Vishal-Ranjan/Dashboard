@@ -1,4 +1,6 @@
-/* div{
+.navigationBar {
+    padding-top: .5%;
+    padding-right: 55px;
     background-color: rgb(250, 250, 250);
-    height: 100%;
-} */
+    height: 1000px;
+}
