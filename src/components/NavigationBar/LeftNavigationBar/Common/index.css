@@ -1,0 +1,15 @@
+.common{
+    font-family: Poppins;
+    margin:30px 20px 0px 45px;
+    display: flex;
+}
+
+.textc{
+    color:rgb(122, 122, 122);
+    margin: -3px 0px 0px 25px;
+}
+
+.textc1 {
+    color: rgb(255, 81, 81);
+    margin: -3px 0px 0px 0px;
+}
