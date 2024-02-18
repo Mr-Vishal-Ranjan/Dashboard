@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 import Card1 from './Card1'
 import Card2 from './Card2'
+import Announcement from './Announcement'
 
 const MainScreen = () => {
 
@@ -33,7 +34,7 @@ const MainScreen = () => {
         men: "120",
         women: "96",
         img: "./images/graph1.png",
-        margin: "12px"
+        margin: "20px"
     },
     {
         title: "Talent Request",
@@ -72,7 +73,11 @@ const MainScreen = () => {
 
                 {/* <Card2 title="Available Position" count="216" men="120" women="96" img="./images/graph1.png" margin="12px" />
                 <Card2 title="Talent Request" count="16" men="6" women="10" img="./images/graph2.png" margin="35px" /> */}
-                
+
+            </div>
+
+            <div>
+                <Announcement />
             </div>
         </div >
     )
