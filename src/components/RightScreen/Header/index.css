@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
 }
 
@@ -33,7 +33,7 @@
     font-weight: 400;
     border: none;
     background-color: rgb(250, 250, 250);
-
+    padding-left: 15px;
 }
 
 ::placeholder {

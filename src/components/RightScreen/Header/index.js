@@ -8,7 +8,7 @@ const Header = () => {
         <input
           className='searchInput'
           type="text"
-          placeholder="   Search"
+          placeholder="Search"
         />
         <button className="searchButton">
           <img style={{ height: '30px', }} src='./images/searchButton.png'></img>
