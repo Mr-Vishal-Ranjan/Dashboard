@@ -4,7 +4,7 @@ import AntCard from './AntCard'
 
 const Announcement = () => {
     return (
-        <div className='announcement'>
+        <div style={{ overflow: 'scroll' }} className='announcement'>
             <div className='titleAct'>
                 Announcement
                 <div>
@@ -13,8 +13,11 @@ const Announcement = () => {
                     </select>
                 </div>
             </div>
-            <div>
-                <AntCard/>
+            <div >
+                <AntCard />
+                <AntCard />
+                <AntCard />
+                <AntCard />
             </div>
         </div>
 
