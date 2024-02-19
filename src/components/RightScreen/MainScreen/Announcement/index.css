@@ -1,9 +1,9 @@
 .announcement {
-    max-height: 400px;
-    max-width: 702px;
+    max-height: 285px;
+    max-width: 620px;
     border: 1px solid #E0E0E0;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .titleAct {
@@ -12,10 +12,10 @@
     display: flex;
     font-weight: 500;
     color: #161E54;
-    gap: 368px;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-bottom: 15px;
+    gap: 310px;
+    margin-top: 12px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 .dropDown {

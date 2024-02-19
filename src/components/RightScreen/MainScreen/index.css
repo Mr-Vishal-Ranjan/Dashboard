@@ -1,21 +1,21 @@
 .mainScreen {
-    margin-top: 21px;
-    margin-left: 4%;
+    margin-top: 8px;
+    margin-left: 2%;
     font-family: Poppins;
 }
 
 .header {
     color: #161E54;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
 }
 
 .cardTop {
     display: flex;
-    gap: 16px;
+    gap: 10px;
 }
 
 .cardBottom {
     display: flex;
-    gap: 16px;
+    gap: 10px;
 }

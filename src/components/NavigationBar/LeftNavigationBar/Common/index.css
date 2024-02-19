@@ -1,16 +1,20 @@
 .common{
     background-color: rgb(250, 250, 250);
     font-family: Poppins;
-    margin:30px 20px 0px 45px;
+    margin: 18% 0% 0% 17%;
     display: flex;
+    font-size: 16px;
+    gap: 21%;
 }
 
 .textc{
     color:rgb(122, 122, 122);
-    margin: -3px 0px 0px 25px;
+    /* margin: -3px 0px 0px 25px; */
+    margin-top: -3%;
 }
 
 .textc1 {
     color: rgb(255, 81, 81);
-    margin: -3px 0px 0px 25px;
+    /* margin: -3px 0px 0px 25px; */
+    margin-top: -3%;
 }

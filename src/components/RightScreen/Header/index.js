@@ -16,15 +16,15 @@ const Header = () => {
       </div>
 
       <div>
-        <img style={{ marginTop: '55px', marginLeft: '440px' }} src='./images/notification.png'></img>
+        <img style={{ marginTop: '32px', marginLeft: '400px' }} src='./images/notification.png'></img>
       </div>
 
       <div>
-        <img style={{ marginTop: '55px', marginLeft: '30px' }} src='./images/chat.png'></img>
+        <img style={{ marginTop: '32px', marginLeft: '25px' }} src='./images/chat.png'></img>
       </div>
 
       <div>
-        <img style={{ marginTop: '46px', marginLeft: '30px' }} src='./images/profile.png'></img>
+        <img style={{ marginTop: '23px', marginLeft: '25px' }} src='./images/profile.png'></img>
       </div>
 
     </div >

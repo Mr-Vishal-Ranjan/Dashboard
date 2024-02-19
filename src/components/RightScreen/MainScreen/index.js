@@ -34,7 +34,7 @@ const MainScreen = () => {
         men: "120",
         women: "96",
         img: "./images/graph1.png",
-        margin: "20px"
+        margin: "10px"
     },
     {
         title: "Talent Request",
@@ -42,7 +42,7 @@ const MainScreen = () => {
         men: "6",
         women: "10",
         img: "./images/graph2.png",
-        margin: "35px"
+        margin: "20px"
     }];
 
 

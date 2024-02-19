@@ -1,7 +1,7 @@
 .recentActivity{
     background-color: #161E54;
-    width: 427px;
-    height: 270px;
+    width: 420px;
+    height: 235px;
     border-radius: 10px;
 }
 
@@ -15,7 +15,7 @@
     max-height: 35px;
     padding-top: 10px;
     padding-left: 25px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 .raTime{
@@ -23,7 +23,7 @@
     color: #7C8098;
     font-size: 11px;
     font-weight: 500;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 25px;
 }
 
@@ -51,7 +51,7 @@
     font-weight: 400;
     color: #FFFFFF;
     margin-left: 25px;
-    margin-top: 45px;
+    margin-top: 40px;
 }
 
 .raButton{
@@ -63,5 +63,5 @@
     border-radius: 4px;
     width: 139px;
     height: 38px;
-    margin-top: 35px;
+    margin-top: 30px;
 }

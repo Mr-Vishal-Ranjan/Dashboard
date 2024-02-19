@@ -1,8 +1,8 @@
 .upcoming{
     border: 1px solid #E0E0E0;
     border-radius: 12px;
-    margin-top: 20px;
-    max-height: 462px;
+    margin-top: 15px;
+    max-height: 340px;
 }
 
 .dropDown1 {
@@ -14,7 +14,7 @@
     background-color: #ffffff;
     border-radius: 1px;
     padding: 3px 8px 3px 4px;
-    margin-top: 23.5px;
+    margin-top: 18px;
 }
 
 .head1{
@@ -23,7 +23,7 @@
     font-size: 13px;
     font-weight: 400;
     margin-left: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -34,6 +34,6 @@
     font-weight: 500;
     color: #161E54;
     /* gap: 368px; */
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 15px;
 }
