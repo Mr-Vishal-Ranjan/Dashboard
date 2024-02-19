@@ -16,7 +16,7 @@ const Header = () => {
       </div>
 
       <div>
-        <img style={{ marginTop: '55px', marginLeft: '820px' }} src='./images/notification.png'></img>
+        <img style={{ marginTop: '55px', marginLeft: '440px' }} src='./images/notification.png'></img>
       </div>
 
       <div>

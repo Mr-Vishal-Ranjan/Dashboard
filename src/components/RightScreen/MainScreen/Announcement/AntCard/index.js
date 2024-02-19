@@ -1,18 +1,19 @@
 import React from 'react'
 import './index.css'
 
-const AntCard = () => {
+const AntCard = (props) => {
+
     return (
         <div className='antCard'>
             <div className='antDetail'>
-                Outing schedule for every departement
+                {props.detail}
                 <div className='antTime'>
-                    5 Minutes ago
+                    {props.time}
                 </div>
             </div>
             
             <div>
-                <img className='pin' src='./images/pinned.png'></img>
+                <img className='pin' src={props.img}></img>
                 <img className='dot' src='./images/threeDot.png'></img>
             </div>
             

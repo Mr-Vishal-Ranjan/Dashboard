@@ -2,13 +2,23 @@ import React from 'react'
 import './index.css';
 import Header from './Header';
 import MainScreen from './MainScreen';
+import Activity from './Activity';
 
 const RightScreen = () =>{
   return (
-    <div>
+    <>
+      <div>
         <Header/>
+        {/* <MainScreen/> */}
+      </div>
+
+      <div style={{display:'flex'}}>
         <MainScreen/>
-    </div>
+        <Activity/>
+      </div>
+    </>
+    
+
   )
 }
 
