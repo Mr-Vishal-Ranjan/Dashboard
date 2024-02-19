@@ -12,6 +12,8 @@ const RightScreen = () =>{
         {/* <MainScreen/> */}
       </div>
 
+      <div className='line'></div>
+
       <div style={{display:'flex'}}>
         <MainScreen/>
         <Activity/>
