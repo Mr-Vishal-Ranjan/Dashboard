@@ -14,7 +14,7 @@ const Announcement = () => {
         img: "./images/pin.png",
     },
     {
-        detail: "IT Department need two more talents for UX/UI",
+        detail: "IT Department need two more talents for UX/UI Designer position",
         time:"Yesterday, 09:15 AM" ,
         img: "./images/pin.png",
     },
