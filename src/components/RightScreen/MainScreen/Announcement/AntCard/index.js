@@ -12,7 +12,7 @@ const AntCard = (props) => {
                 </div>
             </div>
             
-            <div>
+            <div className='antIcon'>
                 <img className='pin' src={props.img}></img>
                 <img className='dot' src='./images/threeDot.png'></img>
             </div>

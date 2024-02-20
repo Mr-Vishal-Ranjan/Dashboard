@@ -12,7 +12,7 @@ const Header = () => {
           placeholder="Search"
         />
         <button className="searchButton">
-          <img style={{ height: '30px', }} src='./images/searchButton.png'></img>
+          <img src='./images/searchButton.png'></img>
         </button>
       </div>
 

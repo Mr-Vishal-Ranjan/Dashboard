@@ -45,3 +45,29 @@
         margin-top: 20px;
     }
 }
+
+@media only screen and (max-width: 390px){
+    .mainScreen {
+        margin-top: 8px;
+        margin-left: -80px;
+        font-family: Poppins;
+        /* overflow: scroll; */
+    }
+
+    .header1 {
+        color: #161E54;
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .cardTop {
+        display: block;
+        /* gap: 18.5px; */
+    }
+
+    .cardBottom {
+        display: block;
+        /* gap: 25px; */
+    }
+}

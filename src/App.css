@@ -1,3 +1,10 @@
 .app {
   display: flex;
 }
+
+@media only screen and (max-width: 390px){
+  .app {
+    display: block;
+  }
+  
+}

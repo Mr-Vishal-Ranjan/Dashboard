@@ -35,7 +35,7 @@
 @media only screen and (max-width: 820px){
     .announcement {
         /* max-height: 285px; */
-        min-width: 637px;
+        min-width: 350px;
         /* border: 1px solid #E0E0E0; */
         /* border-radius: 10px; */
         margin-top: 25px;
@@ -51,5 +51,19 @@
         margin-top: 12px; */
         margin-left: 25px;
         /* margin-bottom: 10px; */
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .announcement {
+        width: 100px;
+        margin-top: 20px;
+        max-height: 320px;
+    }
+
+
+    .titleAct {
+        gap: 35px;
+        margin-top: 10px;
     }
 }

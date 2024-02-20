@@ -24,3 +24,12 @@
         /* overflow: scroll; */
     }
 }
+
+@media only screen and (max-width: 390px){
+    .line{
+        border: 1px solid #F1F1F1;
+        margin-left: 0px;
+        margin-top: 5px;
+        width: 150%;
+    }
+}

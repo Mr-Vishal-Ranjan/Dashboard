@@ -16,3 +16,13 @@
         width: 100%;
     }   
 }
+
+@media only screen and (max-width: 390px){
+    .activity{
+        display: block;
+        margin-top: 20px;
+        margin-left: 0px;
+        min-height: 700px;
+        width: 100%;
+    }   
+}
