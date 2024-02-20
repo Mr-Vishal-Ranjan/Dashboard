@@ -48,7 +48,7 @@ const MainScreen = () => {
 
     return (
         <div className='mainScreen'>
-            <div className='header'>
+            <div className='header1'>
                 Dashboard
             </div>
 

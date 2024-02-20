@@ -4,6 +4,7 @@ import './index.css';
 const Header = () => {
   return (
     <div className='header'>
+      <img className="threeLine" src='./images/threeLine.png'></img>
       <div className="search">
         <input
           className='searchInput'
@@ -15,16 +16,20 @@ const Header = () => {
         </button>
       </div>
 
-      <div>
-        <img style={{ marginTop: '32px', marginLeft: '400px' }} src='./images/notification.png'></img>
+      <div >
+        <img  className='notification' src='./images/notification.png'></img>
       </div>
 
       <div>
-        <img style={{ marginTop: '32px', marginLeft: '25px' }} src='./images/chat.png'></img>
+        <img className='chat'  src='./images/chat.png'></img>
       </div>
 
       <div>
-        <img style={{ marginTop: '23px', marginLeft: '25px' }} src='./images/profile.png'></img>
+        <img className='profile' src='./images/profile.png'></img>
+      </div>
+
+      <div>
+        <img className='profile1' src='./images/smallProfile.png'></img>
       </div>
 
     </div >

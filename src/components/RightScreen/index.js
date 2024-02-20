@@ -14,7 +14,7 @@ const RightScreen = () =>{
 
       <div className='line'></div>
 
-      <div style={{display:'flex'}}>
+      <div className='rightScreen'>
         <MainScreen/>
         <Activity/>
       </div>

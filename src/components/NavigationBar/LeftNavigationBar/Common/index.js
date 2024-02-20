@@ -3,7 +3,6 @@ import './index.css';
 
 const Common = (props) => {
   const {name , img , color} = props;
-  console.log("name",name);
   return (
     <div className='common'>
       <div>

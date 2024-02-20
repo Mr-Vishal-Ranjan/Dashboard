@@ -20,7 +20,7 @@ const RecentActivity = () => {
         Kindly check the requirements and terms of work and make sure everything is right.
       </div>
 
-      <div style={{display:'flex' , gap:'35px'}}>
+      <div className='ractBottom' >
         <div className='timeDetail'>
           Today you makes 12 Activity
         </div>

@@ -4,7 +4,7 @@ import './index.css';
 const Title = (props) => {
   return (
     <>
-      <div className='title'>{props.name}</div>
+      <div className={props.margin?'title1':'title'}>{props.name}</div>
       {/* <style jsx>
         {
           ` .mainMenu{

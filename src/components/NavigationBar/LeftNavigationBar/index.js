@@ -19,7 +19,7 @@ const LeftNavigationBar = () => {
         </div>
 
         <div>
-          <Title name="OTHER"/>
+          <Title name="OTHER" margin="1"/>
           <Common name="Support" img="./images/support.png"/>
           <Common name="Setting" img="./images/setting.png"/>
         </div>
