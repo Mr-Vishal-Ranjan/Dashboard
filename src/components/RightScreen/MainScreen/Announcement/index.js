@@ -1,62 +1,15 @@
 import React from 'react'
 import './index.css'
 import AntCard from './AntCard'
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Announcement = () => {
 
-    const [details, setDetails] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [page, setPage] = useState(1);
-
-    const fetchData = async () => {
-
-        setIsLoading(true);
-        setError(null);
-        // const response = await fetch(`https://jsonplaceholder.typicode.com/posts?`);
-        // const data = await response.json();
-
-        //setDetails(data);
-
-        //setIsLoading(true);
-        //setError(null);
-
-        try {
-            const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
-            const data = await response.json();
-
-           setDetails(prevItems => [...prevItems, ...data]);
-           setPage(prevPage => prevPage + 1);
-           console.log("fetching");
-        } catch (error) {
-           setError(error);
-        } finally {
-           setIsLoading(false);
-        }
-    }
-
-    const handleScroll = () => {
-        if (window.innerHeight + document.getElementsByClassName("announcement").scrollTop !== document.getElementsByClassName("announcement").offsetHeight || isLoading) {
-            // console.log(window.innerHeight + document.document.getElementsByClassName("announcement").scrollTop ,document.getElementsByClassName("announcement").offsetHeight)
-            return;
-        }
-        fetchData();
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [isLoading]);
-
-    useEffect(() => {
-      fetchData()
-      }
-    ,[])
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // [[[[[[[[[[[[]]]]]]]]]]]] --> This is default code for antCard <-- ]]]]]]]]]]]]]]]]
 
     // const details = [{
     //     detail: "Outing schedule for every departement",await fetch(`https://jsonplaceholder.typicode.com/posts?`);
-        // const data = await
     //     time:"5 Minutes ago" ,
     //     img: "./images/pinned.png",
     // },
@@ -76,6 +29,96 @@ const Announcement = () => {
     //     img: "./images/pin.png",
     // },];
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // [[[[[[[[[[[[[[[[[[[[ --> This is infinite scroll in antCard <-- ]]]]]]]]]]]]]]]]]]]]
+
+    // const [details, setDetails] = useState([]);
+    // const [isLoading, setIsLoading] = useState(false);
+    // const [error, setError] = useState(null);
+    // const [page, setPage] = useState(1);
+
+    // const fetchData = async () => {
+
+    //     setIsLoading(true);
+    //     setError(null);
+
+    //     try {
+    //         const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
+    //         const data = await response.json();
+
+    //         setDetails(prevItems => [...prevItems, ...data]);
+    //         setPage(prevPage => prevPage + 1);
+    //         console.log("fetching");
+    //     } catch (error) {
+    //         setError(error);
+    //     } finally {
+    //         setIsLoading(false);
+    //     }
+    // }
+
+    // const handleScroll = () => {
+    //     if (window.innerHeight + document.getElementsByClassName("announcement").scrollTop !== document.getElementsByClassName("announcement").offsetHeight || isLoading) {
+    //         // console.log(window.innerHeight + document.document.getElementsByClassName("announcement").scrollTop ,document.getElementsByClassName("announcement").offsetHeight)
+    //         return;
+    //     }
+    //     fetchData();
+    // };
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, [isLoading]);
+
+    // useEffect(() => {
+    //     fetchData()
+    //     }
+    // , [])
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    // [[[[[[[[[[[[[[[[[[[[[--> This is for button on antCard <--]]]]]]]]]]]]]]]]]]]]]
+
+    const [nextDetails, setNext] = useState([]);
+    const [prevDetails, setPrev] = useState([]);
+    const [page, setPage] = useState(1);
+    const details=[];
+
+    async function fetch() {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
+        setPage(page + 1);
+    }
+
+    const next = async () => {
+        setPrev(next);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
+        setNext(await response.json());
+        setPage(page + 1);
+        console.log(page);
+    }
+
+    const prev = async () => {
+        if (page === 0) return;
+
+        setNext(prev);
+        setPage(page - 1);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
+        setNext(await response.json());
+        console.log(page);
+    }
+
+    useEffect(()=>{
+        const details = prevDetails;
+    },[prev])
+
+    useEffect(() => {
+        const details = nextDetails;
+    }, [next])
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+
     return (
         <div style={{ overflow: 'scroll' }} className='announcement'>
             <div className='titleAct'>
@@ -86,27 +129,31 @@ const Announcement = () => {
                     </select>
                 </div>
             </div>
-            <div >
-            {details.map((i, index) => {
-                return (
-                    // <div key={index}>
-                    //     <AntCard detail={i.detail} time={i.time} img={i.img}  />
-                    // </div>
-                   
-                    <div key={index}>
-                        <AntCard detail={i.title} time={i.body} img="./images/pin.png"/>
-                    </div>
-                        
-                   
-                )
-            })}
 
-                {isLoading && <p>Loading...</p>}
-                {error && <p>Error: {error.message}</p>}
-                
+            <div >
+                {details.map((i, index) => {
+                    return (
+                        // <div key={index}>
+                        //     <AntCard detail={i.detail} time={i.time} img={i.img}  />
+                        // </div>
+
+                        <div key={index}>
+                            <AntCard detail={i.title} time={i.body} img="./images/pin.png" />
+                        </div>
+
+
+                    )
+                })}
+
+                {/* {isLoading && <p>Loading...</p>}
+                {error && <p>Error: {error.message}</p>} */}
+
             </div>
-            
-            
+
+            <div style={{ display: 'flex', marginLeft: '38%', gap: '10px' }}>
+                <button onClick={prev}>Previous</button>
+                <button onClick={next}>Next{page}</button>
+            </div>
         </div>
 
     )
