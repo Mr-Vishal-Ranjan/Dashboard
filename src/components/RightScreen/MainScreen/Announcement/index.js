@@ -37,7 +37,7 @@ const Announcement = () => {
     }
 
     const handleScroll = () => {
-        if (window.innerHeight + document.document.getElementsByClassName("announcement").scrollTop !== document.getElementsByClassName("announcement").offsetHeight || isLoading) {
+        if (window.innerHeight + document.getElementsByClassName("announcement").scrollTop !== document.getElementsByClassName("announcement").offsetHeight || isLoading) {
             // console.log(window.innerHeight + document.document.getElementsByClassName("announcement").scrollTop ,document.getElementsByClassName("announcement").offsetHeight)
             return;
         }
@@ -105,6 +105,8 @@ const Announcement = () => {
                 {error && <p>Error: {error.message}</p>}
                 
             </div>
+            
+            
         </div>
 
     )
