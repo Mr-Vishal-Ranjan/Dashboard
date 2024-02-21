@@ -11,6 +11,9 @@ const Announcement = () => {
     const [page, setPage] = useState(1);
 
     const fetchData = async () => {
+
+        setIsLoading(true);
+        setError(null);
         // const response = await fetch(`https://jsonplaceholder.typicode.com/posts?`);
         // const data = await response.json();
 
@@ -20,11 +23,12 @@ const Announcement = () => {
         //setError(null);
 
         try {
-            const response = await fetch(`https://jsonplaceholder.typicode.com/posts?`);
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
             const data = await response.json();
 
            setDetails(prevItems => [...prevItems, ...data]);
            setPage(prevPage => prevPage + 1);
+           console.log("fetching");
         } catch (error) {
            setError(error);
         } finally {
@@ -33,21 +37,22 @@ const Announcement = () => {
     }
 
     const handleScroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || isLoading) {
-          return;
+        if (window.innerHeight + document.document.getElementsByClassName("announcement").scrollTop !== document.getElementsByClassName("announcement").offsetHeight || isLoading) {
+            // console.log(window.innerHeight + document.document.getElementsByClassName("announcement").scrollTop ,document.getElementsByClassName("announcement").offsetHeight)
+            return;
         }
         fetchData();
-      };
+    };
 
-      useEffect(() => {
-        fetchData()
-        }
-    ,[])
-      
-      useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-      }, [isLoading]);
+    }, [isLoading]);
+
+    useEffect(() => {
+      fetchData()
+      }
+    ,[])
 
     // const details = [{
     //     detail: "Outing schedule for every departement",await fetch(`https://jsonplaceholder.typicode.com/posts?`);
@@ -87,14 +92,17 @@ const Announcement = () => {
                     // <div key={index}>
                     //     <AntCard detail={i.detail} time={i.time} img={i.img}  />
                     // </div>
-
+                   
                     <div key={index}>
                         <AntCard detail={i.title} time={i.body} img="./images/pin.png"/>
-                        {isLoading && <p>Loading...</p>}
-                        {error && <p>Error: {error.message}</p>}
-                    </div>     
+                    </div>
+                        
+                   
                 )
             })}
+
+                {isLoading && <p>Loading...</p>}
+                {error && <p>Error: {error.message}</p>}
                 
             </div>
         </div>
