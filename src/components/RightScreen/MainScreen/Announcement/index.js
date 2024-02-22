@@ -34,6 +34,7 @@ const Announcement = () => {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // [[[[[[[[[[[[[[[[[[[[ --> This is infinite scroll in antCard <-- ]]]]]]]]]]]]]]]]]]]]
 
+
     // const [details, setDetails] = useState([]);
     // const [isLoading, setIsLoading] = useState(false);
     // const [error, setError] = useState(null);
@@ -80,42 +81,32 @@ const Announcement = () => {
     /////////////////////////////////////////////////////////////////////////////////////////////
     // [[[[[[[[[[[[[[[[[[[[[--> This is for button on antCard <--]]]]]]]]]]]]]]]]]]]]]
 
-    const [nextDetails, setNext] = useState([]);
-    const [prevDetails, setPrev] = useState([]);
+    const [details, setDetails] = useState([]);
     const [page, setPage] = useState(1);
-    const details=[];
 
     async function fetch() {
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
-        setPage(page + 1);
+        console.table(response.json());
+        setDetails(response.json());
     }
 
     const next = async () => {
-        setPrev(next);
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
-        setNext(await response.json());
         setPage(page + 1);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
+        setDetails(response.json());
         console.log(page);
     }
 
     const prev = async () => {
         if (page === 0) return;
 
-        setNext(prev);
         setPage(page - 1);
         const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=3`);
-        setNext(await response.json());
+        setDetails(response.json());
         console.log(page);
     }
 
-    useEffect(()=>{
-        const details = prevDetails;
-    },[prev])
-
-    useEffect(() => {
-        const details = nextDetails;
-    }, [next])
-
+    useEffect(fetch,[]);
     //////////////////////////////////////////////////////////////////////////////////////////////
 
 
