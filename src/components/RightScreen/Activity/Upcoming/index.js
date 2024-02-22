@@ -18,7 +18,7 @@ const Upcoming = () => {
     },
   ]
   return (
-    <div className='upcoming' style={{ overflow: 'scroll' }}>
+    <div className='upcoming' style={{ overflowY: 'scroll' }}>
         <div className='upcHeader' >
             <div className='titleUpc'>
                 Upcoming Schedule
